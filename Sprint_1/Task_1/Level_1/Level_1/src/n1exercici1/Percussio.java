@@ -17,7 +17,7 @@ public class Percussio extends Instrument {
         System.out.println("Percussio block init");
     }
 
-    public static void static_method(){
+    public static void static_method_Percussio(){
         System.out.println("Percussio static method");
     }
     public void tocar(){

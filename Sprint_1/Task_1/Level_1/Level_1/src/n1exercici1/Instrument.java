@@ -1,7 +1,5 @@
 package n1exercici1;
 
-import java.sql.SQLOutput;
-
 public abstract class Instrument {
     String nom;
     int preu;

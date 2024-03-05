@@ -4,8 +4,8 @@ public class Main {
     public static void main(String[] args) {
 
         System.out.println("********** accés a un membre estàtic **********");
-        Corda.static_method();
-        Corda.static_method();
+        Corda.static_method_Corda();
+        Corda.static_method_Corda();
 
         System.out.println("\n********** instància de classe Corda **********");
         Corda guitarra = new Corda("Fender", 1000);

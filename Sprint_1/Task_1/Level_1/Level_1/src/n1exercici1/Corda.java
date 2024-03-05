@@ -19,7 +19,7 @@ public class Corda extends Instrument {
         System.out.println("Corda block init nª" + j);
     }
 
-    public static void static_method(){
+    public static void static_method_Corda(){
         i++;
         System.out.println("Corda static method nª" + i);
     }

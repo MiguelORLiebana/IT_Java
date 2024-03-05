@@ -17,7 +17,7 @@ public class Vent extends Instrument {
         System.out.println("Vent block init");
     }
 
-    public static void static_method(){
+    public static void static_method_Vent(){
         System.out.println("Vent static method");
     }
     public void tocar(){
