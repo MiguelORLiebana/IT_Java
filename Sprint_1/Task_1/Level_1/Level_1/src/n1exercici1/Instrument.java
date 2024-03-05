@@ -5,6 +5,12 @@ import java.sql.SQLOutput;
 public abstract class Instrument {
     String nom;
     int preu;
+
+    public Instrument(String nom, int preu){
+        this.nom = nom;
+        this.preu = preu;
+    }
+
     abstract void tocar();
 
     static {
