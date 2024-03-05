@@ -1,5 +1,5 @@
 package n2exercici1;
 
 public interface Camera {
-    void fotografiar();
+    public void fotografiar();
 }

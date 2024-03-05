@@ -1,5 +1,5 @@
 package n2exercici1;
 
 public interface Rellotge {
-    void alarma();
+    public void alarma();
 }
