@@ -7,6 +7,6 @@ public class Main {
 
         smartphone.alarma();
         smartphone.fotografiar();
-        smartphone.trucar("111111");
+        smartphone.trucar("666111555");
     }
 }
