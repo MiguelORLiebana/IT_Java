@@ -9,18 +9,24 @@ public class Main {
     public static void main(String[] args) {
 
         List<Integer> llista = new ArrayList<Integer>();
+        List<Integer> llistaInv = new ArrayList<Integer>();
 
         afegirData(llista);
         mostrarLlista(llista);
 
         ListIterator<Integer> it = llista.listIterator();
 
-        for (ListIterator<Integer> iter = it; iter.hasNext(); ) {
-            Integer i = iter.next();
-            System.out.println(i.intValue());
+        System.out.println("***** listIterator *****");
+        while(it.hasNext()){
+            System.out.println(it.next());
         }
 
+        while(it.hasPrevious()){
+            llistaInv.add(it.previous());
+        }
 
+        System.out.println("****** llista Inversa *******");
+        mostrarLlista(llistaInv);
     }
 
     public static void afegirData(List<Integer> llista){
