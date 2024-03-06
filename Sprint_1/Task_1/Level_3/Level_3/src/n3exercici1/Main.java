@@ -9,6 +9,7 @@ public class Main {
         int aux = 10;
 
         while (aux != 0) {
+            System.out.println("**************** MENU ********************");
             aux = selection(redaccio);
             System.out.println("******************************************");
         }
@@ -46,12 +47,16 @@ public class Main {
                 case 6:
                     break;
                 default:
-                    System.out.println("Error: Invalid value");
+                    System.out.println("******************************************");
+                    System.out.println("      Error: Invalid value");
+                    System.out.println("******************************************");
             }
             return id;
 
         } catch (Exception e) {
-            System.out.println("Valor incorrecte, try again!");
+            System.out.println("******************************************");
+            System.out.println("       Valor incorrecte, try again!");
+            System.out.println("******************************************");
             return 10;
         }
     }

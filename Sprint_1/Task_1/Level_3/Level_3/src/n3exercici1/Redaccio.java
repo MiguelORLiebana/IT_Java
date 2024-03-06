@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Redaccio {
-
     private List<Redactor> redactors;
     private String auxDni;
     private String dni;
