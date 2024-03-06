@@ -36,18 +36,24 @@ public class Main {
 
         System.out.println("**************** FOR ******************");
         mostrarOrdreMonthsFor(months);
+
         System.out.println("*********** ITERATOR *******************");
         mostrarOrdreMonthsIterador(months);
 
-        System.out.println("*************************************");
+        System.out.println("************* AGOST ADDED ***********************");
         months.add(7,agost);
-
         mostrarOrdreMonthsFor(months);
 
         System.out.println("********** CONVERT TO HASHSET ***********");
-        LinkedHashSet<Month> monthsHashset = new LinkedHashSet<Month>(months);
+        LinkedHashSet<Month> monthsLinkedHashset = new LinkedHashSet<Month>(months);
 
-        mostrarOrdreMonthsHashset(monthsHashset);
+        mostrarOrdreMonthsHashset(monthsLinkedHashset);
+
+        System.out.println("******* NO DUPLICITAT D´AGOST ******");
+
+        monthsLinkedHashset.add(agost);
+        monthsLinkedHashset.add(agost);
+        mostrarOrdreMonthsHashset(monthsLinkedHashset);
     }
 
     public static void mostrarOrdreMonthsFor(List<Month> months){
