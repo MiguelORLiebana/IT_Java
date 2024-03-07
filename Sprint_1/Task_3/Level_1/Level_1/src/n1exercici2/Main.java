@@ -12,20 +12,21 @@ public class Main {
         List<Integer> llistaInv = new ArrayList<Integer>();
 
         afegirData(llista);
+
+        System.out.println("***** mostrar llista - for *****");
         mostrarLlista(llista);
 
         ListIterator<Integer> it = llista.listIterator();
 
-        System.out.println("***** listIterator *****");
+        System.out.println("***** mostrar llista - listIterator *****");
         while(it.hasNext()){
             System.out.println(it.next());
         }
 
+        System.out.println("****** llista Inversa *******");
         while(it.hasPrevious()){
             llistaInv.add(it.previous());
         }
-
-        System.out.println("****** llista Inversa *******");
         mostrarLlista(llistaInv);
     }
 
