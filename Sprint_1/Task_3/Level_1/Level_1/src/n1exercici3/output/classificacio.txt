@@ -1,2 +1,4 @@
-Juan té una puntuació de: 1
-Sofia té una puntuació de: 1
+
+Juan té una puntuació de: 4
+Laura té una puntuació de: 0
+John té una puntuació de: 1
