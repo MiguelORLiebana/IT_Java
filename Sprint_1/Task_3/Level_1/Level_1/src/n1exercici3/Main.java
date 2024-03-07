@@ -53,8 +53,6 @@ public class Main {
 
             System.out.println(name + " té una puntuació de: " + punts);
             file.write(name + " té una puntuació de: " + punts + "\n");
-            //file.newLine();
-
 
             file.close();
         } catch(IOException e){
