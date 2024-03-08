@@ -4,6 +4,10 @@ public class Corda extends Instrument {
     static int i;
     static int j;
 
+    public Corda(String nom, int preu){
+        super(nom, preu);
+    }
+
     static {
         System.out.println("Corda init");
         i = 0;
@@ -15,7 +19,7 @@ public class Corda extends Instrument {
         System.out.println("Corda block init nª" + j);
     }
 
-    public static void static_method(){
+    public static void static_method_Corda(){
         i++;
         System.out.println("Corda static method nª" + i);
     }

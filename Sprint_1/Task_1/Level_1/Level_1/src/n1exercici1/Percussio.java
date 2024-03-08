@@ -2,6 +2,10 @@ package n1exercici1;
 
 public class Percussio extends Instrument {
 
+    public Percussio(String nom, int preu){
+        super(nom, preu);
+    }
+
     static int i;
 
     static {
@@ -13,7 +17,7 @@ public class Percussio extends Instrument {
         System.out.println("Percussio block init");
     }
 
-    public static void static_method(){
+    public static void static_method_Percussio(){
         System.out.println("Percussio static method");
     }
     public void tocar(){
