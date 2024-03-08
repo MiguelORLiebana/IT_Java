@@ -6,6 +6,7 @@ public class Cotxe {
     private final int potencia;
 
     public Cotxe(String model, int potencia){
+        //inicialització al constructor dels atributs static i final
         this.model= model;
         this.potencia = potencia;
     }
