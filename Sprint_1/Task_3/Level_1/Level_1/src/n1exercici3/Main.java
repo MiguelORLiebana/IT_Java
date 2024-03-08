@@ -2,6 +2,7 @@ package n1exercici3;
 
 import java.io.*;
 import java.util.HashMap;
+import java.util.Properties;
 import java.util.Scanner;
 
 public class Main {
@@ -68,8 +69,13 @@ public class Main {
         HashMap<String, String> aux = new HashMap<String, String>();
 
         try{
-            File file = new File("src/n1exercici3/resources/countries.txt");
+//            FileInputStream propFile = new FileInputStream( "countries.txt");
+//            Properties p = new Properties(System.getProperties());
+//            p.load(propFile);
+//            System.out.println(p);
 
+            //TODO: problem with the relative path
+            File file = new File("/src/n1exercici3/resources/countries.txt");
             Scanner scanner = new Scanner(file);
 
             while (scanner.hasNextLine()) {
@@ -78,10 +84,11 @@ public class Main {
 
                 aux.put(paisCity[0], paisCity[1]);
             }
+
         } catch(IOException e){
-            System.out.println("No es pot accedir a l´arxiu countries.txt");
+            System.out.println("EXCEPTION: No es pot accedir a l´arxiu countries.txt");
         } catch(ArrayIndexOutOfBoundsException e){
-            System.out.println("Error amb l´array");
+            System.out.println("EXCEPTION: Error amb l´array");
         }
 
         return aux;
