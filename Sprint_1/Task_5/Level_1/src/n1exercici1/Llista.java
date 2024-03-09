@@ -18,12 +18,12 @@ public class Llista {
         File file = new File(directory);
         String[] aux = file.list();
 
+        System.out.println("************* Llista sense ordre alfabètic **********");
         for(String a: aux){
             System.out.println(a);
         }
 
-        List<String> auxList = new ArrayList<String>();
-        System.out.println("****** ordenamos ********");
+        System.out.println("************* Llista per ordre alfabètic ***********");
         Collections.sort(Arrays.asList(aux));
 
         for(String a: aux){
