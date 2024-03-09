@@ -1,4 +1,4 @@
-1. Delete first line of Main.java "package n1exercici1;"
+1. Delete first line of Main.java file "package n1exercici1;"
 2. Open the terminal or cmd a go to the Main.java directory
 3. Compile the Main.java class using the command:
 javac Main.java
