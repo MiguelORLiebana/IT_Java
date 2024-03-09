@@ -24,7 +24,7 @@ public class Llista {
         }
 
         System.out.println("************* Llista per ordre alfabètic ***********");
-        Collections.sort(Arrays.asList(aux));
+        Arrays.sort(aux);
 
         for(String a: aux){
             System.out.println(a);
