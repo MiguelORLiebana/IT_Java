@@ -53,7 +53,7 @@ public class Main {
     public static void guardarPuntuacio(String name, int punts){
 
         try{
-            FileWriter file = new FileWriter("src/n1exercici3/output/classificacio.txt", true);
+            FileWriter file = new FileWriter("Level_1/src/n1exercici3/output/classificacio.txt", true);
 
             System.out.println(name + " té una puntuació de: " + punts);
             file.write(name + " té una puntuació de: " + punts + "\n");
@@ -75,7 +75,16 @@ public class Main {
 //            System.out.println(p);
 
             //TODO: problem with the relative path
-            File file = new File("/src/n1exercici3/resources/countries.txt");
+
+            //Solution1
+//            String path = System.getProperty("user.dir");
+//            String subpath = "/Level_1/src/n1exercici3/countries.txt";
+//            System.out.println(path+subpath);
+            //File file = new File(path+subpath);
+
+            //Soluton2 - working on windows os and mac os
+            File file = new File("Level_1/src/n1exercici3/resources/countries.txt");
+
             Scanner scanner = new Scanner(file);
 
             while (scanner.hasNextLine()) {
