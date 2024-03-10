@@ -1,4 +1,4 @@
-1. Delete first line "package n1exercici2;" of Llista.java and Program.java files
+1. Delete first line "package n1exercici3;" of Llista.java and Program.java files
 2. Open the terminal or cmd and go to the n1exercici3 directory
 3. Compile the Program.java class using the command:
 javac Program.java

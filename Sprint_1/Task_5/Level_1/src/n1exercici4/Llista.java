@@ -1,4 +1,4 @@
-package n1exercici3;
+package n1exercici4;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -8,8 +8,30 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.attribute.BasicFileAttributeView;
 import java.nio.file.attribute.BasicFileAttributes;
+import java.util.Scanner;
 
 public class Llista {
+
+    public void mostrarConsolaFitxer(String directory){
+        try{
+
+//            String dir = System.getProperty("user.dir");
+//            String commandIo = "/output/directoris.txt";
+
+            File file = new File(directory);
+
+            Scanner scanner = new Scanner(file);
+
+            while (scanner.hasNextLine()) {
+                String line = scanner.nextLine();
+                System.out.println(line);
+            }
+        } catch(IOException e){
+            System.out.println("No es pot accedir a l´arxiu .txt");
+        } catch(ArrayIndexOutOfBoundsException e){
+            System.out.println("Error amb l´array");
+        }
+    }
 
     public void llistarContingutDiretoriesAndFolders(String directory, Boolean guardar){
 
@@ -74,7 +96,7 @@ public class Llista {
 
             String commandIo = "/output/directoris.txt";
             FileWriter fileG = new FileWriter(dir + commandIo, true);
-            
+
             fileG.write("Path: " + file.getAbsolutePath() +
                     ", Name: " + file.getName() +
                     tipFitxer +
