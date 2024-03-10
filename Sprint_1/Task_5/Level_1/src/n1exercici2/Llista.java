@@ -58,7 +58,7 @@ public class Llista {
             try{
                 BasicFileAttributes attr = Files.getFileAttributeView(path, BasicFileAttributeView.class).readAttributes();
                 String tipus = IsDirectoryOrFile(attr);
-                showInfo(a, attr, path, tipus);
+                //showInfo(a, attr, path, tipus);
 
             } catch(IOException e){
                 System.out.println("---- Error atributs del directori -----");
