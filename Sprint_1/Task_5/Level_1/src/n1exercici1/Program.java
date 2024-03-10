@@ -3,9 +3,7 @@ package n1exercici1;
 public class Program {
     public static void main(String[] args) {
 
-//        String directory = "/Users/mike/Desktop";
-//        System.out.println(args[0]);
-//        System.out.println(args[0].getClass());
+        //String directory = "/Users/mike/Desktop";
 
         Llista llista = new Llista();
 
