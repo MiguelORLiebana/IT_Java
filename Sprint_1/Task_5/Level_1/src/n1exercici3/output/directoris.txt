@@ -1,0 +1,11 @@
+Path: /Users/mike/Desktop/Test, Name: Test, és un directori (D),  Data de modificacion: 2024-03-09T19:02:22.924496391Z
+Path: /Users/mike/Desktop/Test/a-1, Name: a-1, és un directori (D),  Data de modificacion: 2024-03-09T19:02:45.478692533Z
+Path: /Users/mike/Desktop/Test/a-1/.DS_Store, Name: .DS_Store - és un fitxer (F) Data de modificacion: 2024-03-09T19:03:07.603118046Z
+Path: /Users/mike/Desktop/Test/a-1/a-1.txt, Name: a-1.txt - és un fitxer (F) Data de modificacion: 2024-03-09T19:02:28.652124614Z
+Path: /Users/mike/Desktop/Test/a-1/a-1.1, Name: a-1.1, és un directori (D),  Data de modificacion: 2024-03-09T19:03:04.29187208Z
+Path: /Users/mike/Desktop/Test/a-1/a-1.1/a-1.1.txt, Name: a-1.1.txt - és un fitxer (F) Data de modificacion: 2024-03-09T19:02:28.652124614Z
+Path: /Users/mike/Desktop/Test/a-1/a-1.2, Name: a-1.2, és un directori (D),  Data de modificacion: 2024-03-09T18:59:57Z
+Path: /Users/mike/Desktop/Test/.DS_Store, Name: .DS_Store - és un fitxer (F) Data de modificacion: 2024-03-10T11:45:32.917451746Z
+Path: /Users/mike/Desktop/Test/a-2, Name: a-2, és un directori (D),  Data de modificacion: 2024-03-10T11:45:32.12617678Z
+Path: /Users/mike/Desktop/Test/a-2/a-2.txt, Name: a-2.txt - és un fitxer (F) Data de modificacion: 2024-03-09T19:02:28.652124614Z
+Path: /Users/mike/Desktop/Test/test.txt, Name: test.txt - és un fitxer (F) Data de modificacion: 2024-03-09T19:02:28.652124614Z

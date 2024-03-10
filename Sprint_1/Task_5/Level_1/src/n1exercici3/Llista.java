@@ -11,13 +11,17 @@ import java.nio.file.attribute.BasicFileAttributes;
 
 public class Llista {
 
-    public void llistarContingutDiretoriesAndFolders(String directory){
+    public void llistarContingutDiretoriesAndFolders(String directory, Boolean guardar){
+
         File file = new File(directory);
 
         if(file.isFile()){
-            mostrar(file, Paths.get(file.getAbsolutePath()));
+
+            mostrar(file, Paths.get(file.getAbsolutePath()), guardar);
+
         } else {
-            mostrar(file, Paths.get(file.getAbsolutePath()));
+
+            mostrar(file, Paths.get(file.getAbsolutePath()), guardar);
 
             File[] files = file.listFiles();
 
@@ -27,36 +31,47 @@ public class Llista {
         }
     }
 
-    private void mostrar(File file, Path path){
+    private void mostrar(File file, Path path, Boolean guardar){
+
         try{
+
             BasicFileAttributes attr = Files.getFileAttributeView(path, BasicFileAttributeView.class).readAttributes();
             String tipus = IsDirectoryOrFile(attr);
 
-            showInfo(file, attr, path, tipus);
-            guardarPuntuacioEnArxiu(file, attr, path, tipus);
+            if(!guardar) showInfo(file, attr, tipus);
+            else guardarPuntuacioEnArxiu(file, attr, tipus);
 
         } catch(IOException e){
+
             System.out.println("---- Error atributs del directori -----");
         }
     }
 
     private String IsDirectoryOrFile(BasicFileAttributes attr){
-        String item = "";
-        if(attr.isDirectory()) return item = ", és un directori (D), ";
-        else return item = " - és un fitxer (F)";
+
+        if(attr.isDirectory()) return ", és un directori (D), ";
+        else return " - és un fitxer (F)";
     }
 
-    private void showInfo(File file, BasicFileAttributes attr, Path path, String tipus){
+    private void showInfo(File file, BasicFileAttributes attr, String tipus){
+
         System.out.println("Path: " + file.getAbsolutePath() +
                 ", Name: " + file.getName() +
                 tipus +
                 " Data de modificacion: " + attr.lastModifiedTime());
     }
 
-    public static void guardarPuntuacioEnArxiu(File file, BasicFileAttributes attr, Path path, String tipFitxer){
+    public static void guardarPuntuacioEnArxiu(File file, BasicFileAttributes attr, String tipFitxer){
 
         try{
-            FileWriter fileG = new FileWriter("src/n1exercici3/out/directoris.txt", true);
+
+            String dir = System.getProperty("user.dir");
+
+            //String local = "/src/n1exercici3/output/directoris.txt";
+            //FileWriter fileG = new FileWriter(dir + local, true);
+
+            String commandIo = "/output/directoris.txt";
+            FileWriter fileG = new FileWriter(dir + commandIo, true);
             
             fileG.write("Path: " + file.getAbsolutePath() +
                     ", Name: " + file.getName() +
