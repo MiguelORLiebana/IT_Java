@@ -11,7 +11,39 @@ import java.util.Arrays;
 
 public class Llista {
 
-    public void llistarContingut(String directory) {
+    // Option 1
+    //Notes: https://www.youtube.com/watch?v=pkrRxaOuGDk
+
+    public void llistarContingutDiretoriesAndFolders(String directory){
+        File file = new File(directory);
+
+        if(file.isFile()){
+            mostrar(file, Paths.get(file.getAbsolutePath()));
+        } else {
+            mostrar(file, Paths.get(file.getAbsolutePath()));
+
+            File[] files = file.listFiles();
+
+            for(File f: files){
+                llistarContingutDiretoriesAndFolders(f.toString());
+            }
+        }
+    }
+
+    private void mostrar(File file, Path path){
+        try{
+            BasicFileAttributes attr = Files.getFileAttributeView(path, BasicFileAttributeView.class).readAttributes();
+            String tipus = IsDirectoryOrFile(attr);
+            showInfo(file, attr, path, tipus);
+
+        } catch(IOException e){
+            System.out.println("---- Error atributs del directori -----");
+        }
+    }
+
+    // Option 2 - Not Working
+
+    public void llistarContingutDirectoris(String directory) {
 
         File file = new File(directory);
         String[] aux = file.list();
@@ -34,13 +66,16 @@ public class Llista {
         }
     }
 
-    public String IsDirectoryOrFile(BasicFileAttributes attr){
+    private String IsDirectoryOrFile(BasicFileAttributes attr){
         String item = "";
         if(attr.isDirectory()) return item = ", és un directori (D), ";
         else return item = " - és un fitxer (F)";
     }
 
-    public void showInfo(String nom, BasicFileAttributes attr, Path path, String tipus){
-        System.out.println("Nom: " + nom + tipus + " última data de modificacion: " + attr.lastModifiedTime());
+    private void showInfo(File file, BasicFileAttributes attr, Path path, String tipus){
+        System.out.println("Path: " + file.getAbsolutePath() +
+                ", Name: " + file.getName() +
+                tipus +
+                " Data de modificacion: " + attr.lastModifiedTime());
     }
 }

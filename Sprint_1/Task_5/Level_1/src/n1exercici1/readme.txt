@@ -3,5 +3,4 @@
 3. Compile the Program.java class using the command:
 javac Program.java
 4. Execute the program using the command:
-java Program "directory"
-Example of command -> java Program "/Users/mike/Desktop"
+java Program "directory"  //Example of command -> java Program "/Users/mike/Desktop"
