@@ -2,7 +2,6 @@ package n1exercici3;
 
 import java.io.*;
 import java.util.HashMap;
-import java.util.Properties;
 import java.util.Scanner;
 
 public class Main {
@@ -14,7 +13,7 @@ public class Main {
 
     public static void jugar(){
 
-        HashMap<String, String> hashCountries = new HashMap<String, String>();
+        HashMap<String, String> hashCountries;
         hashCountries = carregarDades();
 
         System.out.println("*********** Comença el joc!! ********");
@@ -44,6 +43,7 @@ public class Main {
         }
 
         guardarPuntuacio(name, punts);
+        scanner.close();
     }
 
     public static int aleatori(HashMap<String, String> dades){
@@ -53,7 +53,12 @@ public class Main {
     public static void guardarPuntuacio(String name, int punts){
 
         try{
-            FileWriter file = new FileWriter("Level_1/src/n1exercici3/output/classificacio.txt", true);
+            String a = System.getProperty("user.dir");
+            String b = "/src/n1exercici3";
+            String c = "/output/classificacio.txt";
+            
+            System.out.println("Path per guardar: " + a + b + c);
+            FileWriter file = new FileWriter(a + b + c, true);
 
             System.out.println(name + " té una puntuació de: " + punts);
             file.write(name + " té una puntuació de: " + punts + "\n");
@@ -66,7 +71,7 @@ public class Main {
 
     public static HashMap<String, String> carregarDades(){
 
-        HashMap<String, String> aux = new HashMap<String, String>();
+        HashMap<String, String> aux = new HashMap<>();
 
         try{
 //            FileInputStream propFile = new FileInputStream( "countries.txt");
@@ -74,16 +79,20 @@ public class Main {
 //            p.load(propFile);
 //            System.out.println(p);
 
-            //TODO: problem with the relative path
+//            TODO: problem with the relative path
 
-            //Solution1
+//            Solution1
 //            String path = System.getProperty("user.dir");
 //            String subpath = "/Level_1/src/n1exercici3/countries.txt";
 //            System.out.println(path+subpath);
             //File file = new File(path+subpath);
 
-            //Soluton2 - working on windows os and mac os
-            File file = new File("Level_1/src/n1exercici3/resources/countries.txt");
+//            Solution2 - working on windows os and mac os
+            String a = System.getProperty("user.dir");
+            String b = "/src/n1exercici3";
+            String c = "/resources/countries.txt";
+            System.out.println(a + b + c);
+            File file = new File(a + b + c);
 
             Scanner scanner = new Scanner(file);
 
@@ -93,6 +102,8 @@ public class Main {
 
                 aux.put(paisCity[0], paisCity[1]);
             }
+
+            scanner.close();
 
         } catch(IOException e){
             System.out.println("EXCEPTION: No es pot accedir a l´arxiu countries.txt");
